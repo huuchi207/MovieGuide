@@ -56,7 +56,7 @@ android {
 ext {
     supportLibVersion = '26.1.0'
     okhttpVersion = '3.9.0'
-    daggerVersion = '2.5'
+    daggerVersion = '2.12'
     espressoVersion = '3.0.1'
 }
 
@@ -94,7 +94,8 @@ dependencies {
     annotationProcessor "com.google.dagger:dagger-compiler:${daggerVersion}"
     implementation "com.google.dagger:dagger:${daggerVersion}"
     compileOnly 'javax.annotation:jsr250-api:1.0'
-
+    implementation "com.google.dagger:dagger-android-support:${daggerVersion}"
+    annotationProcessor "com.google.dagger:dagger-android-processor:${daggerVersion}"
     // Retrofit 2
     implementation 'com.squareup.retrofit2:retrofit:2.3.0'
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
